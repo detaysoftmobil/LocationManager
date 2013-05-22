@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SaveLocation : UIViewController<UITableViewDataSource>
-//Test comment
+
 @end
