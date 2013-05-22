@@ -1,22 +1,15 @@
 //
-//  SaveCell.m
+//  InfoCell.m
 //  LocationManager
 //
-//  Created by Tahir on 11/18/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Tahir Öz on 3/17/13.
+//
 //
 
-#import "SaveCell.h"
+#import "InfoCell.h"
 
-@implementation SaveCell
-@synthesize title,icon;
-
--(void)dealloc{
-    
-    [icon release];
-    [title release];
-    [super dealloc];
-}
+@implementation InfoCell
+@synthesize myField;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

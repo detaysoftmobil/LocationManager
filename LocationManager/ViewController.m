@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "Map.h"
-#import "SaveLocationViewController.h"
+#import "SaveLocation.h"
+
 
 @interface ViewController ()
 
@@ -40,7 +41,7 @@
     location.delegate = self;
     location.desiredAccuracy = kCLLocationAccuracyBest;
     
-  // [location startUpdatingLocation];
+   [location startUpdatingLocation];
 
     
 }
@@ -51,11 +52,11 @@
     // Release any retained subviews of the main view.
 }
 -(void)viewWillAppear:(BOOL)animated{
-   // [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
 }
 -(void)viewWillDisappear:(BOOL)animated{
-   // [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillDisappear:animated];
 }
 
@@ -128,9 +129,10 @@
 #pragma Actions
 -(IBAction)saveLocation:(id)sender
 {
-    SaveLocationViewController *saveLocationViewController = [[SaveLocationViewController alloc] init];
+    
+    SaveLocation *saveLocationViewController = [[SaveLocation alloc] init];
     [self.navigationController pushViewController:saveLocationViewController animated:YES];
-    [saveLocationViewController release];
+    [SaveLocation release];
 }
 
 
